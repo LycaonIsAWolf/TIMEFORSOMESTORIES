@@ -20,6 +20,10 @@ mastodon = Mastodon(client_id=secrets["id"], client_secret=secrets["secret"], ac
 
 def make_post():
 	quote = random.choice(quotes)
+	
+	while len(quote) > 500:
+		quote = random.choice(quotes)
+	
 	print("posting {}".format(quote))
 	mastodon.status_post(quote, visibility="unlisted")
 
