@@ -15,9 +15,6 @@ with open('secrets.json', 'r') as f:
 
 mastodon = Mastodon(client_id=secrets["id"], client_secret=secrets["secret"], access_token=secrets["access_token"], api_base_url="https://botsin.space")
 
-mastodon = Mastodon(client_id=secrets["id"], client_secret=secrets["secret"], access_token=secrets["access_token"], api_base_url="https://botsin.space")
-
-
 def make_post():
 	quote = random.choice(quotes)
 	
